@@ -20,13 +20,10 @@ class MyLinkedList {
         if(index >= size || index < 0){
             return -1;
         }
-        
-        int count = 0;
         Node curr = head;
-        while (count <= index){
+        for(int count = 0; count<= index; count ++){
             curr = curr.next;
-            count ++;
-        }
+        }    
         return curr.val;
     }
     
@@ -62,12 +59,9 @@ class MyLinkedList {
             return;
         }
         
-        //0 1 2 3
-        int count = 0;
         Node curr = head;
-        while(count < index){
+        for(int count = 0; count < index; count ++){
             curr = curr.next;
-            count++;
         }
         curr.next = curr.next.next;
         size--;
