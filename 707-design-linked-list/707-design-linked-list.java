@@ -40,11 +40,9 @@ class MyLinkedList {
             return;
         }
         if(index < 0) index = 0;
-        int count = 0;
         Node curr = head;
-        while(count < index){
+        for(int count = 0; count < index; count ++){
             curr = curr.next;
-            count++;
         }
         
         Node toAdd = new Node(val);
